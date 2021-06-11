@@ -1,0 +1,106 @@
+$white-color : white ; 
+$black-color : black ; 
+$text-color : #ccc ; 
+$primary-color : #ee4d2d ;
+$primary-color-rgba : rgb(238, 77, 45) ;
+$border-color :#dbdbdb ; 
+$height-navbar : 26px ; 
+$height-header : 120px ; 
+$height-search : ($height-header - $height-navbar) ; 
+
+* {
+    box-sizing: inherit;
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem ;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box ;
+
+}
+
+// Modal
+.modal {
+    position : fixed ;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex ;
+    .madal__overlay{
+        position : fixed ;
+        width : 100%; 
+        height : 100%;
+        background-color: rgba(0,0,0,0.3);
+        animation : fadeIn linear 0.2s ; 
+    }
+    .madal__body {
+        margin: auto ;
+        position: relative;
+        z-index: 1;
+        animation: growth linear 0.2s;
+        
+    }
+}
+@keyframes growth {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.btn {
+    min-width : 142px ; 
+    height : 34px ; 
+    border: none; 
+    border-radius : 3px ;   
+    font-size :1.4rem ;
+    cursor: pointer;
+    line-height: 1.4rem ;
+}
+
+.btn.btn-primary {
+    background-color:$primary-color !important; 
+    color :$white-color ;   
+}
+.btn.btn-disabled {
+    color : #949494 ; 
+    cursor : default ; 
+    background-color : #c3c3c3 ; 
+}
+
+
+// pagination 
+.pagination {
+    // font-size: ;
+    display : flex ; 
+    justify-content :center  ;
+    align-items :center ; 
+    padding : 0  ; 
+    list-style : none ; 
+    margin : 0 ; 
+}
+.pagination__list {
+    
+}
+.pagination__item {
+    display : block ; 
+    font-size: 1.6rem ;
+    margin : 0 15px ; 
+    text-decoration: none;
+    color :#939393 ; 
+    line-height: 30px ;
+    min-width: 40px;
+    height : 30px ;
+    text-align: center ; 
+    border-radius : 3px ; 
+}
+.pagination__item-active .pagination__item:hover {
+    background-color: #ed5c3f;
+}
+.pagination__item-active .pagination__item  {
+    background-color:$primary-color ; 
+    color : $white-color ; 
+}
+
